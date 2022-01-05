@@ -1,0 +1,31 @@
+/* body{
+    height: 100%;
+    margin: 0;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: stretch;
+
+    background-image: url("https://images.unsplash.com/photo-1519306980079-d14db7cebf33?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60");
+
+} */
+.menuimage{
+    padding: 20px;
+  width: 400px;
+  margin-bottom: 20px;
+}
+
+  .text{
+    font-family: "Nunito", sans-serif;
+  }
+.thumbnail{
+    background:rgba(222, 192, 222, 0.548);
+    color: white;
+     font-weight: lighter;
+    font-size: small;
+}
+.contenta{
+  background:rgba(212, 174, 212, 0.4);
+  color:black;
+  
+
+}

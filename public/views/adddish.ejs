@@ -1,0 +1,47 @@
+<%- include("./header.ejs") %>
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+<style>
+body {
+    background: #f5d9d5;
+    font-family: "Nunito", sans-serif;
+}
+</style>
+<div class="container text-center" style="margin:0,auto;margin-top:10%;">
+    <div class="jumbotron">
+      <h2 style= "font-family: Nunito;">REGISTER TO CONTINUE</h2>
+    </div>
+<form action="/menu/adddish" method="POST">
+    <div class="ui main text container segment">
+        
+        <form class="ui form">
+            <div class="field">
+                <label for="dish[title]">Title:</label>
+                <input type="text" placeholder="title" name="dish[title]">
+            </div>
+            <div class="field">
+                <label for="dish[image]">Image:</label>
+                <input type="text" placeholder="image url" name="dish[image]">
+               </div>
+               <div class="field">
+                <label for="dish[description]">description:</label>
+                <input type="textarea" placeholder="dish description" name="dish[description]">
+               </div>
+               <div class="field">
+                <label for="dish[price]">Price :</label>
+                <input type="text" placeholder="Price of dish" name="dish[price]">
+               </div>
+               <div class="field">
+                <label><input type="radio" name="dish[veg]" value="true" >VEGETARIAN DISH</label>
+              </div>
+              <div class="field">
+                <label><input type="radio" name="dish[veg]" value="false">NON VEGETARIAN DISH</label>
+              </div>
+            <input class="ui violet inverted button"type="submit">
+        </form>
+    </div>
+</div>
+    
+    
+    
+</form>
+<%- include("./footer.ejs") %>

@@ -1,0 +1,35 @@
+<%- include("./header.ejs") %>
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+<style>
+body {
+    background: #f5d9d5;
+    font-family: "Nunito", sans-serif;
+}
+</style>
+
+<div class="container text-center" style="margin:0,auto;margin-top:10%;">
+    <div class="jumbotron">
+      <h2 style= "font-family: Nunito;">CONTACT US HERE</h2>
+      <p>We promise to reach out to you ASAP!!</p>
+    </div>
+    </form  action="mailto:theanshgupta4868@gmail.com" method="GET">
+    <div class="ui main text container segment">
+        
+            <form class="ui form">
+                <div class=field>
+                    <label for="name">NAME :</label>
+                    <input name="subject" id="name" placeholder="name" type="text">
+                </div>
+                <div class=field>
+                    <label for="querry">QUERRY:</label>
+                    <textarea name="body" id="querry"></textarea>
+                   </div>
+                  
+                <input class="ui violet inverted button"type="submit">
+            </form>
+        </div>
+    </div>
+</div>
+
+
+<%- include("./footer.ejs") %>

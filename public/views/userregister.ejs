@@ -1,0 +1,39 @@
+
+<%- include("./header.ejs") %>
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+<style>
+body {
+    background: #f5d9d5;
+    font-family: "Nunito", sans-serif;
+}
+</style>
+<div class="container text-center" style="margin:0,auto;margin-top:10%;">
+    <div class="jumbotron">
+      <h2 style= "font-family: Nunito;">REGISTER TO CONTINUE</h2>
+    </div>
+<form action="/userregister" method="POST">
+    <div class="ui main text container segment">
+        
+        <form class="ui form">
+            <div class=field>
+                <label for="name">USERNAME :</label>
+                <input type="text" placeholder="username" name="username">
+            </div>
+            <div class=field>
+                <label for="password">PASSWORD:</label>
+                <input type="password" placeholder="password" name="password">
+               </div>
+               <div class=field>
+                <label for="code">admin code:</label>
+                <input type="password" placeholder="admin code" name="admincode">
+               </div>
+              
+            <input class="ui violet inverted button"type="submit">
+        </form>
+    </div>
+</div>
+    
+    
+    
+</form>
+<%- include("./footer.ejs") %>

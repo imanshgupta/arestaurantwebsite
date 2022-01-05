@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css?family=Nunito:200,300,400,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Chelsea+Market&family=Parisienne&display=swap"
+        rel="stylesheet">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/c5a243f2b5.js" crossorigin="anonymous"></script>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="\stylesheet\app.css">
+   
+    <script>
+        if('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('../sw.js')
+            .then((res)=>{console.log("installed")})
+            .catch((err)=>{console.log("error in SW")})
+        }
+    </script>
+
+    <link rel="manifest" href="../manifest.json">
+
+    
+
+    <title>El Chico</title>
+</head>
+
+<body>
+    <div class="container">
+        <nav id="mainNavbar" class="navbar navbar-dark navbar-expand-md py-0 fixed-top">
+            <a href="/" class="navbar-brand"> El Chico</a>
+            <button class="navbar-toggler" data-toggle="collapse" data-target="#navLinks"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navLinks">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a href="/home" class="nav-link ">HOME</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/about" class="nav-link">ABOUT</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/menu" class="nav-link">MENU</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/contact" class="nav-link">CONTACT US</a>
+                    </li>
+                    <% if(!(currentuser)){%>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/userlogin">LOGIN</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/userregister">SIGN UP</a>
+                        </li>
+                        <% }else{ %>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">SIGNED IN AS <%=currentuser.username%></a>
+
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/userlogout">LOGOUT</a>
+                            </li>
+
+                            <% } %>
+
+                                <% if(currentuser && currentuser.isAdmin){ %>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="/menu/adddish">ADD DISH</a>
+                                    </li>
+                                    <%}%>
+                </ul>
+            </div>
+        </nav>
+    </div>

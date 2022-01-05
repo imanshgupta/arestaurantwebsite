@@ -1,0 +1,32 @@
+<%- include("./header.ejs") %>
+
+<link rel="stylesheet" href="/stylesheet/menu.css">
+ 
+    <div class="container">
+
+        <div class="row " style="margin-top: 40px;">
+            <% data.forEach((data)=>{ %>
+                
+                    <div class="col-lg-6 text-center menuimage">
+                        <div class="thumbnail">
+                          <img class="menuimage"src="<%=data.image%>"alt="image">
+                          <div class="contenta text-center" >
+                            <% if (data.veg) { %>
+                                <p style="float: left;"><img src="https://img.icons8.com/color/48/000000/vegetarian-food-symbol.png" style="width: 20px;"/></p>
+                                <%} else { %>
+                                <p style="float: left;"><img src="https://img.icons8.com/color/48/000000/non-vegetarian-food-symbol.png" style="width: 20px;"/></p>
+                                <% } %>
+                              <h3><strong><%=data.title%></strong></h3>
+                              
+                              <p><%-data.description.substring(0,200)%>..</p>
+                              <p>Price : $<%=data.price%></p>
+                              <p><a style="margin-bottom: 10px;"href="/menu/<%=data._id%>">VIEW MORE</a></p>      
+                          </div>
+                        </div>
+                </div>
+        <% })%>
+    </div>
+    </div>
+
+
+    <%- include("./footer.ejs") %>
